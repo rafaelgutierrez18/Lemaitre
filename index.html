@@ -6,82 +6,49 @@
   <title>Lemaitre · Redirigiendo a WhatsApp…</title>
 
   <!-- Tipos “elegantes”: serif para títulos + sans para texto -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppi<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lemaitre · WhatsApp</title>
 
-  <!-- Redirect inmediato (fallback abajo en JS y botón) -->
-  <meta http-equiv="refresh" content="0; url=https://wa.me/525530496564?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20boda" />
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400&display=swap" rel="stylesheet">
 
-  <!-- Metadatos sociales -->
-  <meta property="og:title" content="Lemaitre · Contáctanos por WhatsApp" />
-  <meta property="og:description" content="Te redirigimos para abrir WhatsApp con nuestro equipo." />
-  <meta property="og:type" content="website" />
+  <!-- Redirección automática -->
+  <meta http-equiv="refresh" content="0; url=https://wa.me/525530496564?text=Hola%20quiero%20más%20informaci%C3%B3n%20sobre%20la%20boda" />
 
   <style>
-    :root{
-      --bg:#f7f7f5;         /* fondo cálido claro */
-      --fg:#1d1d1b;         /* texto principal */
-      --muted:#6b6b6b;      /* texto secundario */
-      --accent:#c6a26b;     /* acento dorado suave */
-      --accent-dark:#b48f57;
-      --card:#ffffff;
-      --shadow: 0 10px 30px rgba(0,0,0,.07);
-      --radius: 16px;
+    body {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f7f4; /* fondo claro tipo Lemaitre */
+      color: #1d1d1b;
     }
-    *,*::before,*::after{ box-sizing:border-box }
-    html,body{ height:100% }
-    body{
-      margin:0; background:var(--bg); color:var(--fg);
-      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      display:grid; place-items:center; padding:24px;
+    a {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 18px;
+      font-family: 'Playfair Display', serif;
+      background: #c6a26b; /* dorado Lemaitre */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: background 0.2s ease;
     }
-    .card{
-      width:min(680px, 100%);
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:40px 32px;
-      text-align:center;
+    a:hover {
+      background: #b48f57;
     }
-    h1{
-      font-family:'Playfair Display', Georgia, 'Times New Roman', serif;
-      font-weight:700; letter-spacing:.2px; margin:0 0 10px; font-size:clamp(26px, 4vw, 40px);
-    }
-    p{ margin:0 0 22px; color:var(--muted); line-height:1.6 }
-    .btn{
-      display:inline-block; padding:14px 22px; border-radius:12px;
-      text-decoration:none; background:var(--accent); color:#fff; font-weight:500;
-      transition: transform .08s ease, background .15s ease;
-    }
-    .btn:focus, .btn:hover{ background:var(--accent-dark); transform: translateY(-1px); }
-    .logo{
-      display:inline-flex; align-items:center; gap:10px;
-      font-family:'Playfair Display', Georgia, serif; font-weight:700; color:var(--fg);
-      text-decoration:none; margin-bottom:18px; font-size:18px;
-    }
-    .hint{ font-size:13px; color:#8a8a8a; margin-top:14px }
   </style>
 </head>
 <body>
-  <main class="card" role="main">
-    <a class="logo" href="https://lemaitre.mx" target="_blank" rel="noopener">Lemaitre</a>
-    <h1>Redirigiendo a WhatsApp…</h1>
-    <p>Si no pasa en unos segundos, toca el botón para abrir el chat con nuestro equipo.</p>
-    <a class="btn" id="cta" href="https://wa.me/525530496564?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20boda" target="_blank" rel="noopener">
-      Abrir WhatsApp
-    </a>
-    <div class="hint">Número: +52 55 3049 6564</div>
-  </main>
-
-  <script>
-    // Fallback JS: intenta redirigir por si el meta refresh es bloqueado
-    (function(){
-      var url = "https://wa.me/525530496564?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20boda";
-      // Pequeño delay para permitir pintar el contenido primero
-      setTimeout(function(){ window.location.replace(url); }, 100);
-      // Si el navegador bloquea apertura, el botón queda disponible
-      var cta = document.getElementById('cta');
-      cta.setAttribute('href', url);
-    })();
-  </script>
+  <a href="https://wa.me/525530496564?text=Hola%20quiero%20más%20informaci%C3%B3n%20sobre%20la%20boda" target="_blank" rel="noopener">
+    Abrir WhatsApp
+  </a>
 </body>
 </html>
